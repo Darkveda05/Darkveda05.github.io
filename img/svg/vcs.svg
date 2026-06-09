@@ -1,0 +1,16 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="60" cy="60" r="42" fill="#F5B223"></circle>
+
+  <!-- Git Branch Structure -->
+  <circle cx="42" cy="38" r="6" fill="white"></circle>
+  <circle cx="78" cy="38" r="6" fill="white"></circle>
+  <circle cx="60" cy="78" r="6" fill="white"></circle>
+
+  <!-- Connecting Lines -->
+  <path d="M42 44V58C42 64 47 69 53 69H60" stroke="white" stroke-width="4" stroke-linecap="round"></path>
+
+  <path d="M78 44V58C78 64 73 69 67 69H60" stroke="white" stroke-width="4" stroke-linecap="round"></path>
+
+  <path d="M60 69V72" stroke="white" stroke-width="4" stroke-linecap="round"></path>
+</svg>

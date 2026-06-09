@@ -1,265 +1,260 @@
 <!DOCTYPE html>
-<html lang="ms">
+
+<html lang="en"> 
+
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yusof | Network Engineer</title>
 
-<style>
-:root{
-    --bg:#0b1120;
-    --card:#111827;
-    --accent:#38bdf8;
-    --accent2:#22c55e;
-    --text:#f8fafc;
-    --muted:#94a3b8;
-    --border:#1e293b;
-}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: "Segoe UI", sans-serif;
-}
+<meta name="description" content="Name of your web site">
+<meta name="author" content="Marketify">
 
-body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:var(--bg);
-    overflow:hidden;
-    color:var(--text);
-}
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-/* Animated Background */
-body::before,
-body::after{
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    border-radius:50%;
-    filter:blur(120px);
-    opacity:.25;
-    animation:float 12s ease-in-out infinite;
-}
+<title>Home</title>
 
-body::before{
-    background:#0ea5e9;
-    top:-150px;
-    left:-100px;
-}
+<!-- STYLES -->
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-body::after{
-    background:#22c55e;
-    bottom:-150px;
-    right:-100px;
-    animation-delay:6s;
-}
+<link rel="stylesheet" type="text/css" href="css/plugins.css" />
+<link rel="stylesheet" type="text/css" href="css/dark.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/style2.css" />
 
-@keyframes float{
-    0%,100%{
-        transform:translateY(0) translateX(0);
-    }
-    50%{
-        transform:translateY(40px) translateX(30px);
-    }
-}
+<!-- /STYLES -->
 
-.card{
-    position:relative;
-    z-index:1;
-    width:90%;
-    max-width:520px;
-    background:rgba(17,24,39,.9);
-    backdrop-filter:blur(15px);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:24px;
-    padding:40px;
-    text-align:center;
-    box-shadow:
-        0 0 30px rgba(56,189,248,.15),
-        0 20px 60px rgba(0,0,0,.5);
-    animation:cardEnter 1s ease;
-}
-
-@keyframes cardEnter{
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-.avatar{
-    width:120px;
-    height:120px;
-    margin:auto;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:48px;
-    font-weight:700;
-    background:linear-gradient(135deg,#0ea5e9,#22c55e);
-    color:white;
-    position:relative;
-    animation:pulse 3s infinite;
-}
-
-.avatar::before{
-    content:"";
-    position:absolute;
-    inset:-8px;
-    border-radius:50%;
-    border:2px solid rgba(56,189,248,.4);
-    animation:spin 12s linear infinite;
-}
-
-@keyframes spin{
-    from{transform:rotate(0deg);}
-    to{transform:rotate(360deg);}
-}
-
-@keyframes pulse{
-    0%,100%{
-        box-shadow:0 0 25px rgba(56,189,248,.5);
-    }
-    50%{
-        box-shadow:0 0 45px rgba(34,197,94,.7);
-    }
-}
-
-h1{
-    margin-top:25px;
-    font-size:38px;
-    letter-spacing:.5px;
-}
-
-.role{
-    color:var(--accent);
-    font-size:18px;
-    margin-top:8px;
-    margin-bottom:25px;
-    font-weight:600;
-}
-
-.tagline{
-    color:var(--muted);
-    line-height:1.7;
-    margin-bottom:30px;
-}
-
-.section{
-    text-align:left;
-    margin-top:20px;
-}
-
-.section h3{
-    color:white;
-    margin-bottom:12px;
-    font-size:16px;
-    letter-spacing:1px;
-}
-
-.skills{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-}
-
-.skill{
-    background:#0f172a;
-    border:1px solid #1e293b;
-    padding:10px 16px;
-    border-radius:999px;
-    color:#e2e8f0;
-    transition:.3s;
-}
-
-.skill:hover{
-    transform:translateY(-3px);
-    border-color:var(--accent);
-    box-shadow:0 0 15px rgba(56,189,248,.3);
-}
-
-.fact{
-    background:#0f172a;
-    border-left:4px solid var(--accent2);
-    padding:15px;
-    border-radius:12px;
-    color:#cbd5e1;
-    line-height:1.6;
-}
-
-.badge{
-    display:inline-block;
-    margin-top:25px;
-    padding:10px 20px;
-    border-radius:999px;
-    background:linear-gradient(135deg,#0ea5e9,#22c55e);
-    color:white;
-    font-weight:600;
-    animation:glow 2.5s infinite;
-}
-
-@keyframes glow{
-    0%,100%{
-        box-shadow:0 0 15px rgba(56,189,248,.4);
-    }
-    50%{
-        box-shadow:0 0 30px rgba(34,197,94,.6);
-    }
-}
-
-.footer{
-    margin-top:25px;
-    color:#64748b;
-    font-size:14px;
-}
-</style>
 </head>
-<body>
 
-<div class="card">
+<body class="dark"> 
+	
+	<!-- PRELOADER -->
+	<div id="preloader">
+		<div class="loader_line"></div>
+	</div>
+	<!-- /PRELOADER -->
+	
+<!-- WRAPPER ALL -->
+<div class="iknow_tm_all_wrap" data-magic-cursor="show"> <!-- If you want disable magic cursor change value to "hide" -->	
+	
+	<!-- MODALBOX -->
+	<div class="iknow_tm_modalbox">
+		<div class="box_inner">
+			<div class="close">
+				<a href="#"><img class="svg" src="img/svg/cancel.svg" alt="" /></a>
+			</div>
+			<div class="description_wrap"></div>
+		</div>
+	</div>
+	<!-- /MODALBOX -->
+		
+	<!-- TOPBAR -->
+	<div class="iknow_tm_topbar">
+		<div class="container">
+			<div class="topbar_inner">
+				<div class="logo">
+					<a href="#"><img src="img/logo/light.png" alt="" /></a>
+				</div>
+				<div class="right">
+					<div class="social">
+						<ul>
+							<li><a href="#"><img class="svg" src="img/svg/social/facebook.svg" alt="" /></a></li>
+							<li><a href="#"><img class="svg" src="img/svg/social/twitter.svg" alt="" /></a></li>
+							<li><a href="#"><img class="svg" src="img/svg/social/youtube.svg" alt="" /></a></li>
+							<li><a href="#"><img class="svg" src="img/svg/social/instagram.svg" alt="" /></a></li>
+							<li><a href="https://www.linkedin.com/in/mohammad-yusof-abu-bakar-36447b45"><img class="svg" src="img/svg/social/linkedin-2.svg" alt="" /></a></li>
+						</ul>
+					</div>
+					<div class="iknow_tm_button">
+						<a download="" href="https://file2.darkveda.com/share/BNBWdgs3">Download Resume</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /TOPBAR -->
+	
+	<!-- HERO -->
+	<div class="iknow_tm_hero">
+		<div class="background_shape"></div>
+		<div class="hero_content">
+			<div class="container">
+				<div class="content_inner">
+					<div class="main_info">
+						<div class="left">
+							<span class="subtitle">I'm</span>
+							<h3 class="name">Yusof</h3>
+							<!--	<p class="text">A passionate Network/Security Engineer</p>  -->
+							<p class="text">
+							<span class="typewriter" id="typewriter"></span>
+							<span class="cursor">|</span>
+							</p>
+						</div>
+						<div class="right">
+							<div class="image">
+								<img src="img/thumbs/47-60.jpg" alt="" />
+								<div class="main" data-img-url="img/hero/buble.png"></div>
+							</div>
+						</div>
+					</div>
+					<div class="main_menu">
+						<ul>
+							<li>
+								<img class="svg" src="img/svg/archive.svg" alt="" />
+								<span>About Me</span>
+								<a class="iknow_tm_full_link" href="#about"></a>
+							</li>
+							<li>
+								<img class="svg" src="img/svg/briefcase.svg" alt="" />
+								<span>Project</span>
+								<a class="iknow_tm_full_link" href="#portfolio"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Hero Shapes -->
+		<div class="simple_shapes">
+			<span class="one anim_scale"><img class="svg" src="img/svg/shapes/9.svg" alt="" /></span>
+			<span class="two anim_moveLeft"><img class="svg" src="img/svg/shapes/dot.svg" alt="" /></span>
+			<span class="three anim_moveTop"><img class="svg" src="img/svg/shapes/dot-2.svg" alt="" /></span>
+			<span class="four anim_circle"><img class="svg" src="img/svg/shapes/1.svg" alt="" /></span>
+			<span class="five anim_circle"><img class="svg" src="img/svg/shapes/8.svg" alt="" /></span>
+			<span class="six anim_circle"><img class="svg" src="img/svg/shapes/3.svg" alt="" /></span>
+			<span class="seven anim_right"><img class="svg" src="img/svg/shapes/4.svg" alt="" /></span>
+			<span class="eight anim_scale"><img class="svg" src="img/svg/shapes/9.svg" alt="" /></span>
+			<span class="nine anim_circle"><img class="svg" src="img/svg/shapes/3.svg" alt="" /></span>
+			<span class="ten anim_moveLeft"><img class="svg" src="img/svg/shapes/4.svg" alt="" /></span>
+			<span class="eleven anim_scale"><img class="svg" src="img/svg/shapes/9.svg" alt="" /></span>
+			<span class="twelve anim_extra"><img class="svg" src="img/svg/shapes/2.svg" alt="" /></span>
+			<span class="thirteen anim_circle"><img class="svg" src="img/svg/shapes/5.svg" alt="" /></span>
+			<span class="fourteen anim_scale"><img class="svg" src="img/svg/shapes/9.svg" alt="" /></span>
+			<span class="fifteen anim_circle"><img class="svg" src="img/svg/shapes/3.svg" alt="" /></span>
+			<span class="sixteen anim_scale"><img class="svg" src="img/svg/shapes/9.svg" alt="" /></span>
+			<span class="seventeen anim_circle"><img class="svg" src="img/svg/shapes/5.svg" alt="" /></span>
+			<span class="eighteen anim_scale"><img class="svg" src="img/svg/shapes/9.svg" alt="" /></span>
+			<span class="nineteen anim_scale"><img class="svg" src="img/svg/shapes/9.svg" alt="" /></span>
+			<span class="twenty anim_circle"><img class="svg" src="img/svg/shapes/1.svg" alt="" /></span>
+		</div>
+		<!-- /Hero Shapes -->
+		
+	</div>
+	<!-- /HERO -->
+	
+	<!-- MAINPART -->
+	<div class="container">
+		<div class="iknow_tm_mainpart">
+	
+			<!-- ABOUT -->
+			<div id="about" class="iknow_tm_main_section">
+				<div class="iknow_tm_about">
+					<div class="left">
+						<div class="left_inner">
+							<div class="image">
+								<img src="img/thumbs/35-44.jpg" alt="" />
+								<div class="main" data-img-url="img/about/pho1.jpg"></div>
+							</div>
+							<div class="details">
+								<ul>
+									<li>
+										<h3>Name</h3>
+										<span>Mohammad Yusof Abu Bakar</span>
+									</li>
+									<li>
+										<h3>Mail</h3>
+										<span>myusof05@yahoo.com</span>
+									</li>
+									<li>
+										<h3>Phone</h3>
+										<span>+60 179207209</span>
+									</li>
+									<li>
+										<h3>Address</h3>
+										<span>Malacca</span>
+									</li>
+									<li>
+										<h3>Nationality</h3>
+										<span>Malaysia</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="right">
+						<div class="iknow_tm_main_title">
+							<span>About Me</span>
+						</div>
+						<div class="text">
+							<p><br/>Hey! 👋 </p>
+									<p><br/>I’m Yusof, Senior Network & Security Engineer with over a decade of experience designing, securing, and optimizing complex, multi-vendor network environments.</p>
+									<p><br/>I specialize in building resilient and high-performance infrastructures that improve reliability, strengthen security posture, and support business-critical operations. I am passionate about solving real-world networking challenges, driving continuous performance improvements, and implementing secure, scalable network solutions.</p>
+						</div>
+						<div class="iknow_tm_button">
+							<a download="" href="https://file2.darkveda.com/share/BNBWdgs3">Download Resume</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /ABOUT -->
+			
+			<!-- PORTFOLIO -->
+			<div id="portfolio" class="iknow_tm_main_section">
+				<div class="iknow_tm_portfolio iptv-fix">
 
-    <div class="avatar">Y</div>
+				<div class="iknow_tm_main_title">
+					<span>Mini Project</span><br></br><p></p>
+				</div>
+			<div class="iptv-content">
+			 <ul>
+			<li><a href="https://github.com/Darkveda05/WSL-VMware-Compatibility-Scripts" style="color: white;">WSL-VMware-Compatibility-Scripts</a></li>
+            <li><a href="https://github.com/Darkveda05/Darkveda-IPTV" style="color: white;">Darkveda-IPTV</a></li>
+            <li><a href="https://github.com/Darkveda05/MVNBC" style="color: white;">Multivendor Network Backup Config (MVNBC)</a></li>
+            <li><a href="https://github.com/Darkveda05/MVNBC_Dashboard" style="color: white;">Multivendor Network Backup Config (MVNBC) - Dashboard</a></li>
+           </ul>
+			</div>
+				</div>
+			</div>
+			<!-- /PORTFOLIO -->
 
-    <h1>Yusof</h1>
-
-    <div class="role">Network Engineer</div>
-
-
-    <div class="section">
-        <h3>⚡ KEMAHIRAN</h3>
-        <div class="skills">
-            <div class="skill">Linux</div>
-            <div class="skill">Git</div>
-            <div class="skill">Docker</div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h3>🚀 FAKTA MENARIK</h3>
-        <div class="fact">
-            Suka belajar & mengikuti perkembangan teknologi terkini
-        </div>
-    </div>
-
-    <div class="badge">
-        Available For Opportunities
-    </div>
-
-    <div class="footer">
-        Building Reliable Networks • Continuous Learning • Problem Solver
-    </div>
-
+		</div>
+	</div>
+	<!-- /MAINPART -->
+	
+	<!-- COPYRIGHT -->
+	<div class="iknow_tm_copyright hidden">
+		<div class="iknow_tm_copyright hidden">
+		<div class="container">
+		<div class="inner">
+		<div class="left">
+		<p>Copyright © <a>ucop</a></p>
+		</div>
+		<div class="right">
+		<ul>
+		</ul>
+		</div>
+		</div>
+		</div>
+	</div>
+	</div>
+	<!-- /COPYRIGHT -->
+	
+	<!-- MAGIC CURSOR -->
+	<div class="mouse-cursor cursor-outer"></div>
+	<div class="mouse-cursor cursor-inner"></div>
+	<!-- /MAGIC CURSOR -->
+	
 </div>
+<!-- / WRAPPER ALL -->
+	
+<!-- SCRIPTS -->
+<script src="js/jquery.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/init.js"></script>
+<script src="js/scripts.js"></script>
+<!-- /SCRIPTS -->
 
 </body>
 </html>
